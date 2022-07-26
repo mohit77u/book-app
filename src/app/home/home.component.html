@@ -1,0 +1,553 @@
+<!-- step-indicators -->
+<section class="step-top py-8 border-b border-black">
+    <!-- step top -->
+    <div class="step-main flex flex-wrap">
+        <div class="single-step-indicator cursor-pointer py-2 w-full sm:w-6/12 md:4/12 xl:w-2/12 flex justify-start" (click)="changeStep($event, 1)">
+            <div class="number h-8 w-8 leading-8 rounded-full bg-gray-300 text-dark text-center font-medium text-sm">1
+            </div>
+            <div class="step-name ml-2">
+                <h4 class="mb-1 text-sm font-medium {{step == 1 ? 'text-blue-600' : 'text-black'}}">Publishing Price esitimator</h4>
+                <p class="text-gray-500 text-xs">Estimate printing cost of your book </p>
+            </div>
+        </div>
+        <div class="single-step-indicator cursor-pointer py-2 w-full sm:w-6/12 md:4/12 xl:w-2/12 flex justify-start" (click)="changeStep($event, 2)">
+            <div class="number h-8 w-8 leading-8 rounded-full bg-gray-300 text-dark text-center font-medium text-sm">2
+            </div>
+            <div class="step-name ml-2">
+                <h4 class="mb-1 text-sm font-medium {{step == 2 ? 'text-blue-600' : 'text-black'}}">Review & Submit Print Order</h4>
+                <p class="text-gray-500 text-xs">Once you submit an order our team <br> will review it and get back to
+                    you </p>
+            </div>
+        </div>
+        <div class="single-step-indicator cursor-pointer py-2 w-full sm:w-6/12 md:4/12 xl:w-2/12 flex justify-start" (click)="changeStep($event, 3)">
+            <div class="number h-8 w-8 leading-8 rounded-full bg-gray-300 text-dark text-center font-medium text-sm">3
+            </div>
+            <div class="step-name ml-2">
+                <h4 class="mb-1 text-sm font-medium {{step == 3 ? 'text-blue-600' : 'text-black'}}">Upload Manuscript</h4>
+                <p class="text-gray-500 text-xs">Please upload your manuscript we take <br>
+                    care confidentiality of your content till it gets published</p>
+            </div>
+        </div>
+        <div class="single-step-indicator cursor-pointer py-2 w-full sm:w-6/12 md:4/12 xl:w-2/12 flex justify-start" (click)="changeStep($event, 4)">
+            <div class="number h-8 w-8 leading-8 rounded-full bg-gray-300 text-dark text-center font-medium text-sm">4
+            </div>
+            <div class="step-name ml-2">
+                <h4 class="mb-1 text-sm font-medium {{step == 4 ? 'text-blue-600' : 'text-black'}}">Payment </h4>
+                <p class="text-gray-500 text-xs">Pay for your order here</p>
+            </div>
+        </div>
+        <div class="single-step-indicator cursor-pointer py-2 w-full sm:w-6/12 md:4/12 xl:w-2/12 flex justify-start" (click)="changeStep($event, 5)">
+            <div class="number h-8 w-8 leading-8 rounded-full bg-gray-300 text-dark text-center font-medium text-sm">5
+            </div>
+            <div class="step-name ml-2">
+                <h4 class="mb-1 text-sm font-medium {{step == 5 ? 'text-blue-600' : 'text-black'}}">Signup for printing</h4>
+                <p class="text-gray-500 text-xs">Review your print job detail, preview and <br> signup for final
+                    printing</p>
+            </div>
+        </div>
+        <div class="single-step-indicator cursor-pointer py-2 w-full sm:w-6/12 md:4/12 xl:w-2/12 flex justify-start" (click)="changeStep($event, 6)">
+            <div class="number h-8 w-8 leading-8 rounded-full bg-gray-300 text-dark text-center font-medium text-sm">6
+            </div>
+            <div class="step-name ml-2">
+                <h4 class="mb-1 text-sm font-medium {{step == 6 ? 'text-blue-600' : 'text-black'}}">Let us know your feedback</h4>
+                <p class="text-gray-500 text-xs">Share your feedback and help us <br>
+                    to make this platform better</p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+    </div>
+</section>
+
+<!-- step form-main -->
+<section class="step-form-main pb-10">
+    <div class="container">
+        <!-- step 1 -->
+        <div class="step-1 my-8" *ngIf="step == 1">
+            <h2 class="text-dark text-xl mb-2 font-bold">Book Cost Estimator </h2>
+            <p class="text-sm text-gray-700">We collect your email and mobile number to let you know about our offers
+                and packages.</p>
+            <!-- form field starts -->
+            <div class="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-1 gap-8 pt-6">
+                <div class="form-group">
+                    <label
+                        class="block mb-2 font-medium text-lg after:content-['*'] after:ml-0.5 after:text-red-500">Name</label>
+                    <input type="text" class="border border-black py-3 px-4 w-full">
+                </div>
+                <div class="form-group">
+                    <label
+                        class="block mb-2 font-medium text-lg after:content-['*'] after:ml-0.5 after:text-red-500">Email</label>
+                    <input type="text" class="border border-black py-3 px-4 w-full">
+                </div>
+                <div class="form-group">
+                    <label class="block mb-2 font-medium text-lg">Mobile</label>
+                    <input type="text" class="border border-black py-3 px-4 w-full">
+                </div>
+            </div>
+
+            <div class="form-group my-6">
+                <h5 class="block mb-2 font-medium text-lg after:content-['*'] after:ml-0.5 after:text-red-500">Book
+                    Orientation</h5>
+                <div class="inline-flex">
+                    <label class="flex items-center"><input type="radio" name="orientation"
+                            class="mr-2">Portrait</label>
+                    <label class="flex items-center ml-5"><input type="radio" name="orientation"
+                            class="mr-2">Landscape</label>
+                </div>
+            </div>
+
+            <div class="form-group my-6">
+                <h5 class="block mb-2 font-medium text-lg after:content-['*'] after:ml-0.5 after:text-red-500">Paper
+                    Size and count</h5>
+                <div class="inline-flex">
+                    <select id="countries"
+                        class="border border-black text-black text-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                        <option selected="">A4 (12cmX35CM)</option>
+                        <option>A4 (12cmX35CM)</option>
+                        <option>A4 (12cmX35CM)</option>
+                        <option>A4 (12cmX35CM)</option>
+                        <option>A4 (12cmX35CM)</option>
+                    </select>
+
+                    <input type="text" name="orientation" class="ml-2 w-full py-3 px-5 border border-black"
+                        placeholder="Page Count">
+                </div>
+            </div>
+
+            <div class="form-group my-6">
+                <h5 class="block mb-2 font-medium text-lg after:content-['*'] after:ml-0.5 after:text-red-500">Book
+                    Content Type</h5>
+                <div class="inline-flex">
+                    <label class="flex items-center"><input type="radio" name="orientation" class="mr-2">Ready to
+                        print(word, pdf)</label>
+                    <div class="flex items-center ml-5">
+                        <label><input type="radio" name="orientation" class="mr-2">Raw Manuscript</label> <img
+                            src="../../assets/images/help.png" alt="help" class="ml-2"
+                            title="If you have written your content on paper and pen and want us to craft the pages for you in PDF">
+                    </div>
+                </div>
+            </div>
+            <div class="form-group my-6">
+                <div class="flex items-center">
+                    <h5 class="block font-medium text-lg after:content-['*'] after:ml-0.5 after:text-red-500">Uplaod
+                        Sample Content</h5>
+                    <img src="../../assets/images/help.png" alt="help" class="ml-2 inline"
+                        title="Take photo and uplaod 4 to 5 pages to help us estimate a more accurate cost">
+                </div>
+                <p class="text-gray-700 text-sm mb-4">(Optional)</p>
+                <div class="inline-flex">
+                    <button class="border border-black px-4 py-3 w-64 text-left text-gray-600 block" onclick="document.getElementById('getFile').click()">Choose a file</button>
+                    <input type='file' id="getFile" style="display:none">
+                    <button class="bg-black px-8 py-3 text-white text-sm ml-2">Upload</button>
+                </div>
+            </div>
+
+            <div class="form-group my-6">
+                <h5 class="block font-medium text-lg mb-3">Paper Quality - <span class="text-gray-500">BnW</span></h5>
+                <div class="inline-flex">
+                    <label class="radio-img relative">
+                        <input type="radio" name="layout" value="L" />
+                        <div class="image" style="background-image: url(../../assets/images/placeholder.png)"></div>
+                        <span class="absolute text-center w-full left-0 text-black">White</span>
+                    </label>
+                    <label class="radio-img ml-4 relative">
+                        <input type="radio" name="layout" value="L" />
+                        <div class="image" style="background-image: url(../../assets/images/placeholder.png)"></div>
+                        <span class="absolute text-center w-full left-0 text-black">Creamy White</span>
+                    </label>
+                </div>
+                <input type="text" class="block my-3 md:w-2/12 w-full py-3 px-5 border border-black"
+                    placeholder="Specify GSM">
+            </div>
+
+            <div class="form-group my-6">
+                <h5 class="block font-medium text-lg mb-3">Paper Interior Colour - <span
+                        class="text-gray-500">BnW</span></h5>
+                <div class="inline-flex">
+                    <label class="radio-img relative">
+                        <input type="radio" name="layout" value="L" />
+                        <div class="image" style="background-image: url(../../assets/images/placeholder.png)"></div>
+                        <span class="absolute text-center w-full left-0 text-black">BnW</span>
+                    </label>
+                    <label class="radio-img ml-4 relative">
+                        <input type="radio" name="layout" value="L" />
+                        <div class="image" style="background-image: url(../../assets/images/placeholder.png)"></div>
+                        <span class="absolute text-center w-full left-0 text-black">Bnw Standard</span>
+                    </label>
+                    <label class="radio-img relative">
+                        <input type="radio" name="layout" value="L" />
+                        <div class="image" style="background-image: url(../../assets/images/placeholder.png)"></div>
+                        <span class="absolute text-center w-full left-0 text-black">Bnw
+                            Premium</span>
+                    </label>
+                    <label class="radio-img ml-4 relative">
+                        <input type="radio" name="layout" value="L" />
+                        <div class="image" style="background-image: url(../../assets/images/placeholder.png)"></div>
+                        <span class="absolute text-center w-full left-0 text-black">Bnw
+                            Colour</span>
+                    </label>
+                    <label class="radio-img relative">
+                        <input type="radio" name="layout" value="L" />
+                        <div class="image" style="background-image: url(../../assets/images/placeholder.png)"></div>
+                        <span class="absolute text-center w-full left-0 text-black">Bnw
+                            Colour</span>
+                    </label>
+                    <label class="radio-img ml-4 relative">
+                        <input type="radio" name="layout" value="L" />
+                        <div class="image" style="background-image: url(../../assets/images/placeholder.png)"></div>
+                        <span class="absolute text-center w-full left-0 text-black">Creamy
+                            White</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group my-6">
+                <h5 class="block mb-2 font-medium text-lg after:content-['*'] after:ml-0.5 after:text-red-500">Cover
+                    Page</h5>
+                <div class="inline-flex">
+                    <label class="flex items-center"><input type="radio" name="cover" class="mr-2">Final to print
+                    </label>
+                    <label class="flex items-center ml-5"><input type="radio" name="cover" class="mr-2">Use our design
+                        service</label>
+                </div>
+            </div>
+
+            <div class="form-group my-6">
+                <h5 class="block font-medium text-lg mb-3 after:content-['*'] after:ml-0.5 after:text-red-500">Cover
+                    Quality - <span class="text-gray-500">Glossy</span></h5>
+                <div class="inline-flex">
+                    <label class="radio-img relative">
+                        <input type="radio" name="layout" value="L" />
+                        <div class="image" style="background-image: url(../../assets/images/placeholder.png)"></div>
+                        <span class="absolute text-center w-full left-0 text-black">Glossy </span>
+                    </label>
+                    <label class="radio-img ml-4 relative">
+                        <input type="radio" name="layout" value="L" />
+                        <div class="image" style="background-image: url(../../assets/images/placeholder.png)"></div>
+                        <span class="absolute text-center w-full left-0 text-black">Mate</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group my-6">
+                <h5 class="block font-medium text-lg mb-3 after:content-['*'] after:ml-0.5 after:text-red-500">Binding
+                    Type - <span class="text-gray-500">Glossy</span></h5>
+                <div class="inline-flex">
+                    <label class="radio-img relative">
+                        <input type="radio" name="binding" value="L" />
+                        <div class="image" style="background-image: url(../../assets/images/placeholder.png)"></div>
+                        <span class="absolute text-center w-full left-0 text-black">Paper Back</span>
+                    </label>
+                    <label class="radio-img ml-4 relative">
+                        <input type="radio" name="binding" value="L" />
+                        <div class="image" style="background-image: url(../../assets/images/placeholder.png)"></div>
+                        <span class="absolute text-center w-full left-0 text-black">Spiral</span>
+                    </label>
+                    <label class="radio-img ml-4 relative">
+                        <input type="radio" name="binding" value="L" />
+                        <div class="image" style="background-image: url(../../assets/images/placeholder.png)"></div>
+                        <span class="absolute text-center w-full left-0 text-black">Spiral</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group my-6">
+                <h5 class="block mb-2 font-medium text-lg after:content-['*'] after:ml-0.5 after:text-red-500">Book
+                    Quantity</h5>
+                <div class="inline-flex">
+                    <input type="range" name="quantity" class="w-64" min="1" max="15" value="5">
+                    <input type="text" name="quantity" class="ml-5 border border-black px-4 py-3 block w-20" value="15">
+                </div>
+            </div>
+
+            <div class="bottom">
+                <h3 class="text-md font-bold mb-0.5">Estimated price for one book is </h3>
+                <h6 class="text-xl font-semibold mb-0.5">Rs. 125/- (Total Rs. 3499/- )</h6>
+                <p class="text-gray-500 text-sm mb-4">(Inclusive of all taxes)</p>
+                <div class="flex flex-wrap justify-between">
+                    <div>
+                        <button class="bg-black px-12 py-3 text-white">Estimate</button>
+                        <button class="bg-black px-8 py-3 text-white ml-6">Send this estimation to my mail</button>
+                    </div>
+                    <button class="bg-black px-8 py-3 text-white">Login and publish </button>
+                </div>
+            </div>
+        </div>
+        <!-- step 2 -->
+        <div class="step-2 py-8" *ngIf="step == 2">
+            <!-- This example requires Tailwind CSS v2.0+ -->
+            <div class="bg-white shadow overflow-hidden sm:rounded-lg">
+                <div class="border-t border-gray-200">
+                    <dl>
+                        <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                            <dt class="text-sm font-medium text-black">m- Name</dt>
+                            <dd class="mt-1 text-sm text-black sm:mt-0 sm:col-span-2">Asit</dd>
+                        </div>
+                        <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                            <dt class="text-sm font-medium text-black">m- Email ID</dt>
+                            <dd class="mt-1 text-sm text-black sm:mt-0 sm:col-span-2">asd@gmail.com</dd>
+                        </div>
+                        <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                            <dt class="text-sm font-medium text-black">Mobile No</dt>
+                            <dd class="mt-1 text-sm text-black sm:mt-0 sm:col-span-2">9090063768</dd>
+                        </div>
+                        <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                            <dt class="text-sm font-medium text-black">m-Book Quantity</dt>
+                            <dd class="mt-1 text-sm text-black sm:mt-0 sm:col-span-2">50</dd>
+                        </div>
+                        <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                            <dt class="text-sm font-medium text-black">m- Paper Size</dt>
+                            <dd class="mt-1 text-sm text-black sm:mt-0 sm:col-span-2">A4</dd>
+                        </div>
+                        <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                            <dt class="text-sm font-medium text-black">Manuscript type</dt>
+                            <dd class="mt-1 text-sm text-black sm:mt-0 sm:col-span-2"></dd>
+                        </div>
+                        <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                            <dt class="text-sm font-medium text-black">m- Quantity</dt>
+                            <dd class="mt-1 text-sm text-black sm:mt-0 sm:col-span-2">180</dd>
+                        </div>
+                        <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                            <dt class="text-sm font-medium text-black">Cover Page</dt>
+                            <dd class="mt-1 text-sm text-black sm:mt-0 sm:col-span-2">Need to design</dd>
+                        </div>
+                        <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                            <dt class="text-sm font-medium text-black">m- Cover Page Quality</dt>
+                            <dd class="mt-1 text-sm text-black sm:mt-0 sm:col-span-2">Glossy</dd>
+                        </div>
+                        <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                            <dt class="text-sm font-medium text-black">m- Binding</dt>
+                            <dd class="mt-1 text-sm text-black sm:mt-0 sm:col-span-2">Value</dd>
+                        </div>
+                    </dl>
+                </div>
+            </div>
+
+            <div class="form-group py-8">
+                <div class="inline-flex items-center">
+                    <label class="block whitespace-nowrap mb-2 font-medium text-lg">Book Name</label>
+                    <input type="text" name="name" class="ml-5 border border-black px-4 py-3 block w-full md:w-80" placeholder="Please enter your book title">
+                </div>
+            </div>
+
+            <div class="bottom pb-6">
+                <div class="flex flex-wrap">
+                    <button class="bg-black px-12 py-3 text-white">Submit Order for review</button>
+                    <button class="bg-black px-8 py-3 text-white ml-6">Edit your Estimation</button>
+                </div>
+            </div>
+
+        </div>
+        <!-- step 3 -->
+        <div class="step-3 pb-8" *ngIf="step == 3">
+            <h2 class="step-3-top bg-gray-200 text-center px-4 py-2 text-black text-2xl">
+                Your Order ID: BK00023, Book Name: My dream Book, Pages : 23pages, Books Quantity: 40
+            </h2>
+            <div class="form-group py-6">
+                <h2 class="text-dark text-xl mb-2 font-bold">Please upload your Manuscript.</h2>
+                <p class="text-sm text-gray-700">If your manuscript is handwritten please scan it with a readable resolution and convert to pdf then upload here.</p>
+                <div class="inline-flex mt-6">
+                    <button class="border border-black px-4 py-3 w-64 text-left text-gray-600 block" onclick="document.getElementById('getFile').click()">Choose a file</button>
+                    <input type='file' id="getFile" style="display:none">
+                    <button class="bg-black px-8 py-3 text-white text-sm ml-2">Upload</button>
+                </div>
+                <p class="text-gray-700 mb-2 mt-4 text-lg">Supports format: PDF</p>
+                <p class="text-black mb-4 mt-2 text-[20px] max-w-[740px] font-bold">
+                    Success: Your manuscript is uplaoded for review. Please be sure
+                    that your we understand the confidentiality of your manuscript.
+                  </p>
+                  <p class="text-gray-700 mb-2  text-lg">
+                    Validation : Please upload valid format
+                  </p>
+                  <div class="mb-2 flex flex-col space-y-2">
+                    <h4 class="text-black text-[20px]  font-bold">
+                      Upload cover image
+                    </h4>
+                    <label class="text-black text-lg">
+                      Upload your cover design .
+                    </label>
+                    <div class="inline-flex mt-6">
+                      <button
+                        class="border border-black px-4 py-3 w-64 text-left text-gray-600 block"
+                        onclick="document.getElementById('getFile').click()"
+                      >
+                        File Picker
+                      </button>
+                      <input type="file" id="getFile" style="display: none" />
+                      <button class="bg-black px-8 py-3 text-white text-sm ml-2">
+                        Upload
+                      </button>
+                    </div>
+                  </div>
+                  <span class="mt-4 block text-black">
+                    Download your non-disclosure agreement.
+                  </span>
+                  <button class="bg-black px-8 py-3 mt-4 text-white text-sm flex">
+                    Download NDA
+                  </button>
+                  <button class="bg-[#D9D9D9] text-black px-8 py-3 flex mt-12">
+                    Submit For Review
+                  </button>
+            </div>
+            <!-- form field starts -->
+        </div>
+        <!-- step 4 -->
+        <div class="step-4 pb-8" *ngIf="step === 4">
+            <h2 class=" bg-gray-200 text-center px-4 py-2 text-black text-2xl">
+              Your Order ID: BK00023, Book Name: My dream Book, Pages : 23pages,
+              Books Quantity: 40
+            </h2>
+            <div class="form-group py-6">
+              <h2 class="text-dark text-xl mb-2 font-bold">Secure Payment</h2>
+              <p class="text-sm text-gray-700">
+                Once payment is made we will organise your content and take a
+                final approval from you.
+              </p>
+              <div class="mt-8 mb-4 flex items-center space-x-1">
+                <b class="text-black text-[20px]">Book Name : </b>
+                <span class="text-[18px]">My Dream Book</span>
+              </div>
+              <h3 class="text-md font-bold mb-0.5">
+                Estimated price for one book is
+              </h3>
+              <h6 class="text-xl font-semibold mb-0.5">
+                Rs. 125/- (Total Rs. 3499/- )
+              </h6>
+              <div class="mt-2">
+                <p class="mb-2">(Inclusive of all taxes)</p>
+                <div class="flex items-center space-x-2">
+                  <input type="checkbox" name="agree" id="agree" />
+                  <label htmlFor="agree">
+                    Here by I agree that I have read and understood all terms
+                    and conditions related to this printing services
+                  </label>
+                </div>
+              </div>
+              <button class="bg-black px-8 py-3 mt-8 font-bold text-white text-sm flex">
+                Pay now
+              </button>
+
+              <div class="ml-[200px] mt-16 font-bold text-[23px]">
+                Success: Payment is done . <br /> Your order will be delivered
+                by 23/04/22
+              </div>
+            </div>
+          </div>
+        <!-- step 5 -->
+        <div class="step-5 pb-8" *ngIf="step === 5">
+            <h2 class=" bg-gray-200 text-center px-4 py-2 text-black text-2xl">
+              Your Order ID: BK00023, Book Name: My dream Book, Pages : 23pages,
+              Books Quantity: 40
+            </h2>
+            <div class="form-group py-6">
+              <h2 class="text-dark text-xl mb-2 font-bold">
+                Preview and Signup
+              </h2>
+              <p class="text-sm text-gray-700">
+                Preview how your book will look like after it gets printed. You
+                can see first 5 pages and last 5 pages of your book in your
+                review.
+              </p>
+              <img
+                class="mt-12 mb-20"
+                src="../../assets/images/downloadbook.png"
+                alt=""
+              />
+
+              <form action="" class="max-w-[700px]">
+                <h4 class="text-black text-[20px] mb-4 font-bold text-lg">
+                  Delivery Addess
+                </h4>
+                <div class="ml-4">
+                  <div class="grid grid-cols-2 w-full gap-x-4 gap-y-6 ">
+                    <div class="w-full flex flex-col space-y-4">
+                      <label htmlFor="" class="text-black font-semibold">
+                        Name
+                      </label>
+                      <input type="text" />
+                    </div>
+                    <div class="w-full flex flex-col space-y-4">
+                      <label htmlFor="" class="text-black font-semibold">
+                        Name
+                      </label>
+                      <input type="text" />
+                    </div>
+                    <div class="w-full flex flex-col space-y-4">
+                      <label htmlFor="" class="text-black font-semibold">
+                        Plot/Flat
+                      </label>
+                      <input type="text" />
+                    </div>
+                    <div class="w-full flex flex-col space-y-4">
+                      <label htmlFor="" class="text-black font-semibold">
+                        Zip Code
+                      </label>
+                      <input type="text" />
+                    </div>
+                  </div>
+                  <button class="bg-black px-8 py-3 mt-8 w-[170px] font-bold text-white text-sm flex justify-center ml-auto">
+                    Save
+                  </button>
+                </div>
+              </form>
+              <div class="mt-12">
+                <div class="flex items-center space-x-2">
+                  <input type="checkbox" name="agree" id="agree" />
+                  <label htmlFor="agree">
+                    Here by I agree that I have read and understood all terms
+                    and conditions related to this printing services
+                  </label>
+                </div>
+              </div>
+              <button class="bg-black px-8 py-3 mt-10 w-[170px] font-bold text-white text-sm flex justify-center">
+                Approve
+              </button>
+            </div>
+          </div>
+        <!-- step 6 -->
+        <div class="step-6" *ngIf="step === 6">
+            <h2 class=" bg-gray-200 text-center px-4 py-2 text-black text-2xl">
+              Your Order ID: BK00023, Book Name: My dream Book, Pages : 23pages,
+              Books Quantity: 40
+            </h2>
+            <div class="form-group py-6">
+              <h2 class="text-black text-[50px] font-bold">
+                Congratulations! Asit,
+              </h2>
+              <h6 class="text-black text-[30px] ">
+                Your Book is out now !
+              </h6>
+              <img
+                class="max-w-[400px] mb-8 mt-4"
+                src="../../assets/images/book.png"
+                alt=""
+              />
+              <p class="text-black font-semibold text-lg">
+                Let us know how was your experience
+              </p>
+              <div class="rating flex space-x-2 mt-4">
+                <img class="w-8" src="../../assets/images/ratingstar.png" alt="" />
+                <img class="w-8" src="../../assets/images/ratingstar.png" alt="" />
+                <img class="w-8" src="../../assets/images/ratingstar.png" alt="" />
+                <img class="w-8" src="../../assets/images/ratingstar.png" alt="" />
+                <img class="w-8" src="../../assets/images/ratingstar.png" alt="" />
+              </div>
+              <div class="mt-4 max-w-[400px] w-full">
+                <textarea
+                  class="resize-none w-full border-2 border-[#D9D9D9]"
+                  name=""
+                  id=""
+                  cols="30"
+                  rows="3"
+                ></textarea>
+              </div>
+              <button class="bg-black px-8 py-3 mt-10 w-[140px] font-bold text-white text-sm flex justify-center">
+                Submit
+              </button>
+              <div class="text-center text-[25px] mt-10">
+                <b>Success: Thank you Asit, For your Feedback</b>
+              </div>
+            </div>
+          </div>
+    </div>
+</section>
