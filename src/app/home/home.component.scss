@@ -3,6 +3,19 @@
 //     height: 30px;
 //     line-height: 30px;
 // }
+@media only screen and (max-width:480px){
+    .number{
+        font-size: 10px !important;
+        width: 25px;
+        height: 25px;
+        line-height: 25px !important;
+    }
+}
+@media screen and (max-width:992px) {
+    .step-name{
+        display: none;
+    }
+}
 .container {
     margin: auto;
     max-width: 90%;
@@ -12,22 +25,23 @@
     position: relative;
     // width: 16%;
     padding: 0 5px;
-
+    .number{
+        line-height: 35px;
+    }
     h4 {
         font-size: 13px;
-         @media screen and (max-width:480px) {
-        font-size: 18px;
-       
-        
-    }
+
+        @media screen and (max-width:480px) {
+            font-size: 18px;
+        }
 
     }
 
     p {
         font-size: 10px;
-         @media screen and (max-width:480px) {
-        font-size: 13px;
-    }
+        @media screen and (max-width:480px) {
+            font-size: 13px;
+        }
     }
 
     &:after {
@@ -36,13 +50,22 @@
         width: 25px;
         height: 2px;
         background-color: black;
-        top: 18%;
+        top: 16px;
         right: 5px;
-         @media screen and (max-width:480px) {
-       display: none;
-       
-        
-    }
+
+        @media only screen and (min-width:768px) and (max-width:992px) {
+            width: 50px;
+            right: -25px;
+        }
+        @media only screen and (min-width:480px) and (max-width:768px) {
+            width: 35px;
+            right: -25px;
+        }
+        @media only screen and (max-width:480px){
+            width: 18px;
+            right: -17px;
+            top: 12px;
+        }
     }
 }
 
@@ -64,10 +87,9 @@ $image-border-current: aqua;
     background-size: cover;
     background-color: $image-bg;
     display: inline-block;
+
     @media screen and (max-width:480px) {
         width: 100%;
-       
-        
     }
 
     &:hover {
@@ -76,13 +98,12 @@ $image-border-current: aqua;
 }
 
 .radio-img {
-
     // background-color: #F1F1F1;
-     @media screen and (max-width:480px) {
+    @media screen and (max-width:480px) {
         width: 100%;
         min-height: 300px;
-        
     }
+
     >input {
         display: none;
     }

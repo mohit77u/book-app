@@ -1,17 +1,17 @@
 <!-- step-indicators -->
 <section class="step-top py-8 border-b border-black">
     <!-- step top -->
-    <div class="step-main flex md:flex-row flex-col gap-4 md:gap-0 flex-wrap">
-        <div class="single-step-indicator cursor-pointer py-2 w-full sm:w-6/12 md:4/12 xl:w-2/12 flex justify-start" (click)="changeStep($event, 1)">
-            <div class="number flex-shrink-0 md:h-8 md:w-8 h-10 w-10 leading-8 rounded-full bg-gray-300 text-dark text-center font-medium text-sm">1
+    <div class="step-main flex justify-center gap-4 md:gap-0">
+        <div class="single-step-indicator cursor-pointer py-2 w-full sm:w-6/12 md:4/12 xl:w-2/12 flex justify-center lg:justify-start">
+            <div class="number flex-shrink-0 h-10 w-10 leading-8 rounded-full bg-gray-300 text-dark text-center font-medium text-sm">1
             </div>
             <div class="step-name ml-2">
                 <h4 class="mb-1 md:text-sm font-medium {{step == 1 ? 'text-blue-600' : 'text-black'}}">Publishing Price esitimator</h4>
                 <p class="text-gray-500 text-xs">Estimate printing cost of your book </p>
             </div>
         </div>
-        <div class="single-step-indicator cursor-pointer py-2 w-full sm:w-6/12 md:4/12 xl:w-2/12 flex justify-start" (click)="changeStep($event, 2)">
-            <div class="number flex-shrink-0 md:h-8 md:w-8 h-10 w-10 leading-8 rounded-full bg-gray-300 text-dark text-center font-medium text-sm">2
+        <div class="single-step-indicator cursor-pointer py-2 w-full sm:w-6/12 md:4/12 xl:w-2/12 flex justify-center lg:justify-start">
+            <div class="number flex-shrink-0 h-10 w-10 leading-8 rounded-full bg-gray-300 text-dark text-center font-medium text-sm">2
             </div>
             <div class="step-name ml-2">
                 <h4 class="mb-1 md:text-sm font-medium {{step == 2 ? 'text-blue-600' : 'text-black'}}">Review & Submit Print Order</h4>
@@ -19,8 +19,8 @@
                     you </p>
             </div>
         </div>
-        <div class="single-step-indicator cursor-pointer py-2 w-full sm:w-6/12 md:4/12 xl:w-2/12 flex justify-start" (click)="changeStep($event, 3)">
-            <div class="number flex-shrink-0 md:h-8 md:w-8 h-10 w-10 leading-8 rounded-full bg-gray-300 text-dark text-center font-medium text-sm">3
+        <div class="single-step-indicator cursor-pointer py-2 w-full sm:w-6/12 md:4/12 xl:w-[300px] flex justify-center lg:justify-start">
+            <div class="number flex-shrink-0 h-10 w-10 leading-8 rounded-full bg-gray-300 text-dark text-center font-medium text-sm">3
             </div>
             <div class="step-name ml-2">
                 <h4 class="mb-1 md:text-sm font-medium {{step == 3 ? 'text-blue-600' : 'text-black'}}">Upload Manuscript</h4>
@@ -28,16 +28,16 @@
                     care confidentiality of your content till it gets published</p>
             </div>
         </div>
-        <div class="single-step-indicator cursor-pointer py-2 w-full sm:w-6/12 md:4/12 xl:w-2/12 flex justify-start" (click)="changeStep($event, 4)">
-            <div class="number flex-shrink-0 md:h-8 md:w-8 h-10 w-10 leading-8 rounded-full bg-gray-300 text-dark text-center font-medium text-sm">4
+        <div class="single-step-indicator cursor-pointer py-2 w-full sm:w-6/12 md:4/12 xl:w-[160px] flex justify-center lg:justify-start">
+            <div class="number flex-shrink-0 h-10 w-10 leading-8 rounded-full bg-gray-300 text-dark text-center font-medium text-sm">4
             </div>
             <div class="step-name ml-2">
                 <h4 class="mb-1 md:text-sm font-medium {{step == 4 ? 'text-blue-600' : 'text-black'}}">Payment </h4>
                 <p class="text-gray-500 text-xs">Pay for your order here</p>
             </div>
         </div>
-        <div class="single-step-indicator cursor-pointer py-2 w-full sm:w-6/12 md:4/12 xl:w-2/12 flex justify-start" (click)="changeStep($event, 5)">
-            <div class="number flex-shrink-0 md:h-8 md:w-8 h-10 w-10 leading-8 rounded-full bg-gray-300 text-dark text-center font-medium text-sm">5
+        <div class="single-step-indicator cursor-pointer py-2 w-full sm:w-6/12 md:4/12 xl:w-2/12 flex justify-center lg:justify-start">
+            <div class="number flex-shrink-0 h-10 w-10 leading-8 rounded-full bg-gray-300 text-dark text-center font-medium text-sm">5
             </div>
             <div class="step-name ml-2">
                 <h4 class="mb-1 md:text-sm font-medium {{step == 5 ? 'text-blue-600' : 'text-black'}}">Signup for printing</h4>
@@ -45,8 +45,8 @@
                     printing</p>
             </div>
         </div>
-        <div class="single-step-indicator cursor-pointer py-2 w-full sm:w-6/12 md:4/12 xl:w-2/12 flex justify-start" (click)="changeStep($event, 6)">
-            <div class="number flex-shrink-0 md:h-8 md:w-8 h-10 w-10 leading-8 rounded-full bg-gray-300 text-dark text-center font-medium text-sm">6
+        <div class="single-step-indicator cursor-pointer py-2 w-full sm:w-6/12 md:4/12 xl:w-2/12 flex justify-center lg:justify-start">
+            <div class="number flex-shrink-0 h-10 w-10 leading-8 rounded-full bg-gray-300 text-dark text-center font-medium text-sm">6
             </div>
             <div class="step-name ml-2">
                 <h4 class="mb-1 md:text-sm font-medium {{step == 6 ? 'text-blue-600' : 'text-black'}}">Let us know your feedback</h4>
@@ -72,12 +72,12 @@
                 <div class="form-group">
                     <label
                         class="block mb-2 font-medium text-lg after:content-['*'] after:ml-0.5 after:text-red-500">Name</label>
-                    <input type="text" class="border border-black py-3 px-4 w-full" name="name" [(ngModel)]="name">
+                    <input type="text" class="border border-black py-3 px-4 w-full" name="name" [(ngModel)]="name" required>
                 </div>
                 <div class="form-group">
                     <label
                         class="block mb-2 font-medium text-lg after:content-['*'] after:ml-0.5 after:text-red-500">Email</label>
-                    <input type="text" class="border border-black py-3 px-4 w-full"  name="email" [(ngModel)]="email">
+                    <input type="text" class="border border-black py-3 px-4 w-full"  name="email" [(ngModel)]="email" required>
                 </div>
                 <div class="form-group">
                     <label class="block mb-2 font-medium text-lg">Mobile</label>
@@ -90,9 +90,9 @@
                     Orientation</h5>
                 <div class="inline-flex">
                     <label class="flex items-center"><input type="radio"  name="book_orientation" [(ngModel)]="book_orientation"
-                            class="mr-2" value="Portrait">Portrait</label>
+                            class="mr-2" value="Portrait" required>Portrait</label>
                     <label class="flex items-center ml-5"><input type="radio"  name="book_orientation" [(ngModel)]="book_orientation" value="Landscape"
-                            class="mr-2">Landscape</label>
+                            class="mr-2" required>Landscape</label>
                 </div>
             </div>
 
@@ -100,7 +100,7 @@
                 <h5 class="block mb-2 font-medium text-lg after:content-['*'] after:ml-0.5 after:text-red-500">Paper
                     Size and count</h5>
                 <div class="inline-flex">
-                    <select id="paper_size"
+                    <select id="paper_size" required
                         class="border border-black text-black text-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="paper_size" [(ngModel)]="paper_size">
                         <option selected="">A4 (12cmX35CM)</option>
                         <option>A4 (12cmX35CM)</option>
@@ -120,10 +120,10 @@
                 <div class="inline-flex">
                     <label class="flex items-center">
                       <input type="radio" name="book_content" [(ngModel)]="book_content" value="Ready to
-                      print(word, pdf)" class="mr-2">Ready to
+                      print(word, pdf)" class="mr-2" required>Ready to
                         print(word, pdf)</label>
                     <div class="flex items-center ml-5">
-                        <label><input type="radio" name="book_content" [(ngModel)]="book_content" value="Raw Manuscript" class="mr-2">Raw Manuscript</label> <img
+                        <label><input type="radio" name="book_content" [(ngModel)]="book_content" value="Raw Manuscript" class="mr-2" required>Raw Manuscript</label> <img
                             src="../../assets/images/help.png" alt="help" class="ml-2"
                             title="If you have written your content on paper and pen and want us to craft the pages for you in PDF">
                     </div>
@@ -131,16 +131,16 @@
             </div>
             <div class="form-group my-6">
                 <div class="flex items-center">
-                    <h5 class="block font-medium text-lg after:content-['*'] after:ml-0.5 after:text-red-500">Uplaod
+                    <h5 class="block font-medium text-lg">Uplaod
                         Sample Content</h5>
                     <img src="../../assets/images/help.png" alt="help" class="ml-2 inline"
                         title="Take photo and uplaod 4 to 5 pages to help us estimate a more accurate cost">
                 </div>
                 <p class="text-gray-700 text-sm mb-4">(Optional)</p>
-                <div class="inline-flex">
-                    <button class="border border-black px-4 py-3 w-64 text-left text-gray-600 block" onclick="document.getElementById('getFile').click()">Choose a file</button>
+                <div class="flex flex-wrap">
+                    <button class="border border-black px-4 py-3 sm:w-64 w-full text-left text-gray-600 block" onclick="document.getElementById('getFile').click()">Choose a file</button>
                     <input type='file' id="getFile" style="display:none">
-                    <button class="bg-black px-8 py-3 text-white text-sm ml-2">Upload</button>
+                    <button class="bg-black px-8 py-3 text-white text-sm sm:ml-2 w-full sm:w-auto mt-2 sm:w-mt-0">Upload</button>
                 </div>
             </div>
 
@@ -208,9 +208,9 @@
                 <h5 class="block mb-2 font-medium text-lg after:content-['*'] after:ml-0.5 after:text-red-500">Cover
                     Page</h5>
                 <div class="inline-flex">
-                    <label class="flex items-center"><input type="radio"  name="cover_page" [(ngModel)]="cover_page" value="Final to print" class="mr-2">Final to print
+                    <label class="flex items-center"><input type="radio"  name="cover_page" [(ngModel)]="cover_page" value="Final to print" class="mr-2" required>Final to print
                     </label>
-                    <label class="flex items-center ml-5"><input type="radio" name="cover_page" [(ngModel)]="cover_page" value="Use our design service"  class="mr-2">Use our design service</label>
+                    <label class="flex items-center ml-5"><input type="radio" name="cover_page" [(ngModel)]="cover_page" value="Use our design service" required class="mr-2">Use our design service</label>
                 </div>
             </div>
 
@@ -219,12 +219,12 @@
                     Quality - <span class="text-gray-500">Glossy</span></h5>
                 <div class="flex sm:flex-row flex-col gap-5 items-center flex-wrap">
                     <label class="radio-img relative">
-                        <input type="radio"  name="cover_quality" [(ngModel)]="cover_quality" value="Glossy" />
+                        <input type="radio"  name="cover_quality" [(ngModel)]="cover_quality" value="Glossy" required />
                         <div class="image" style="background-image: url(../../assets/images/placeholder.png)"></div>
                         <span class="absolute text-center w-full left-0 text-black">Glossy </span>
                     </label>
                     <label class="radio-img ml-4 relative">
-                        <input type="radio"  name="cover_quality" [(ngModel)]="cover_quality" value="Mate" />
+                        <input type="radio"  name="cover_quality" [(ngModel)]="cover_quality" value="Mate" required />
                         <div class="image" style="background-image: url(../../assets/images/placeholder.png)"></div>
                         <span class="absolute text-center w-full left-0 text-black">Mate</span>
                     </label>
@@ -236,17 +236,17 @@
                     Type - <span class="text-gray-500">Glossy</span></h5>
                 <div class="flex sm:flex-row flex-col gap-5 items-center flex-wrap">
                     <label class="radio-img relative">
-                        <input type="radio" name="binding_type" [(ngModel)]="binding_type" value="Paper Back" />
+                        <input type="radio" name="binding_type" [(ngModel)]="binding_type" value="Paper Back" required />
                         <div class="image" style="background-image: url(../../assets/images/placeholder.png)"></div>
                         <span class="absolute text-center w-full left-0 text-black">Paper Back</span>
                     </label>
                     <label class="radio-img ml-4 relative">
-                        <input type="radio" name="binding_type" [(ngModel)]="binding_type" value="Spiral" />
+                        <input type="radio" name="binding_type" [(ngModel)]="binding_type" value="Spiral" required />
                         <div class="image" style="background-image: url(../../assets/images/placeholder.png)"></div>
                         <span class="absolute text-center w-full left-0 text-black">Spiral</span>
                     </label>
                     <label class="radio-img ml-4 relative">
-                        <input type="radio" name="binding_type" [(ngModel)]="binding_type" value="Spiral" />
+                        <input type="radio" name="binding_type" [(ngModel)]="binding_type" value="Spiral" required />
                         <div class="image" style="background-image: url(../../assets/images/placeholder.png)"></div>
                         <span class="absolute text-center w-full left-0 text-black">Spiral</span>
                     </label>
@@ -256,9 +256,9 @@
             <div class="form-group my-6">
                 <h5 class="block mb-2 font-medium text-lg after:content-['*'] after:ml-0.5 after:text-red-500">Book
                     Quantity</h5>
-                <div class="inline-flex">
-                    <input type="range" name="quantity" class="w-64" min="1" max="15"  name="book_quantity" [(ngModel)]="book_quantity">
-                    <input type="text" name="quantity" class="ml-5 border border-black px-4 py-3 block w-20"  name="book_quantity" [(ngModel)]="book_quantity">
+                <div class="flex flex-wrap">
+                    <input type="range" name="quantity" class="sm:w-64 w-full" min="1" max="15"  name="book_quantity" [(ngModel)]="book_quantity" required>
+                    <input type="text" name="quantity" class="sm:ml-5 sm:mt-0 mt-2 w-full sm:w-20 border border-black px-4 py-3 block"  name="book_quantity" [(ngModel)]="book_quantity" required>
                 </div>
             </div>
 
